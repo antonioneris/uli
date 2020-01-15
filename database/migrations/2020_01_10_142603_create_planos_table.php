@@ -15,11 +15,14 @@ class CreatePlanosTable extends Migration
     {
         Schema::create('planos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('plano',200);
-            $table->decimal('valorAdesao',7,2);
-            $table->integer('descontoAdesao');
-            $table->decimal('valorMensalidade',7,2);
-            $table->integer('descontoMensalidade');
+            $table->string('nome',200);
+            $table->decimal('valorAdesao',7,2)->nullable();
+            $table->integer('descontoAdesao')->nullable();;
+            $table->decimal('valorMensalidade',7,2)->nullable();
+            $table->integer('descontoMensalidade')->nullable();
+            $table->decimal('valorAnuidade',7,2)->nullable();
+            $table->integer('descontoAnuidade')->nullable();
+            $table->decimal('valorTotal',7,2)->nullable();
             $table->timestamps();
         });
     }

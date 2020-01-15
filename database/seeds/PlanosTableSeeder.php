@@ -18,14 +18,17 @@ class PlanosTableSeeder extends Seeder
         $plano->descontoAdesao = '0';
         $plano->valorMensalidade = '49.90';
         $plano->descontoMensalidade = '0';
+        $plano->save();
 
         //Plano Anual
         $plano = new \App\Planos();
         $plano->nome = 'Plano Anual';
-        $plano->valorAdesao = '499.00';
+        $plano->valorAdesao = ' 299.40';
         $plano->descontoAdesao = '40';
-        $plano->valorMensalidade = '49.90';
-        $plano->descontoMensalidade = '10';
+        $plano->valorAnuidade = '538.92';
+        $plano->descontoAnuidade = '10';
+        $plano->valorTotal = '838.32';
+        $plano->save();
         
     }
 }

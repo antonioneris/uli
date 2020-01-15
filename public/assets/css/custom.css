@@ -29,10 +29,11 @@
     box-shadow: 3px 6px 0 rgba(0,0,0,.16);
     -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
     border-radius: 0.35rem;
+    border: 3px solid #ffff;
 }
 
 .active {
-    border: 2px solid #5d18e6;
+    border: 3px solid #1826e6;
 }
 
 .itens{
@@ -47,29 +48,56 @@
 }
 .oferta-desconto{
     font-family: "Open Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 10px;
-    color:#5d18e6;
+    color:#1826e6;
     font-weight: bold;
 }
 
-#precos {
+#valorParcelas {
     border: none;
     border-bottom: 1px solid #dddd;
     border-radius: 0px;
 }
 
-#precos:focus{
-    border-bottom: 1px solid #5d18e6;
+#valorParcelas:focus{
+    border-bottom: 1px solid #1826e6;
+}
+
+#nome{
+    text-transform: capitalize;
+}
+
+select{
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 select:focus {
     border: none;
 }
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    border-radius: 0px;
+    font-size: 1.3rem;
+    font-family: "Open Sans", sans-serif;
+    color: #000000 !important;
+    }
+    
 .form-control:focus{
     box-shadow: none;
 }
 
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
+}
 
 .btn{
     box-shadow: 10px 6px 0 rgba(0,123,255,.16);
@@ -85,5 +113,21 @@ select:focus {
 }
 
 #voltar{
-    color: #5d18e6;
+    color: #1826e6;
+}
+
+.label{
+    font-size: 15px;
+    font-weight: 600;
+    color: #cfcfcf;
+}
+
+.btn-padding{
+    padding-top: 130px;
+}
+
+.error{
+    color: red !important;
+    border-bottom: 1px solid red !important;
+    border-radius: 0px;
 }
