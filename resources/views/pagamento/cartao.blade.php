@@ -4,7 +4,7 @@
 
 <div class="container mt-4 pb-5">
     <div class="row justify-content-md-start ">
-        <p class="text-left"><i class="fas fa-chevron-left" id="voltar"></i>
+        <p class="text-left"><a href="{{ URL::previous() }}"><i class="fas fa-chevron-left" id="voltar"></i></a>
         </p>  
     </div>
     <div class="row">
@@ -17,16 +17,17 @@
         <h4 class="titulo">Dados do Cartão</h4>
     </div>
     
-    <form action="">
+    <form action="{{ route('salvarCartao')}}" method="POST">
+        @csrf
         <div class="row mt-4">
             <div class="col-12">
                 <div class="form-group">
                     <label class="label" for="numeroCartao">Numero do Cartão</label>
-                    <input type="text" class="form-control align-middle" id="numeroCartao">
+                    <input type="text" class="form-control align-middle" id="numeroCartao" name="numeroCartao">
                 </div>
                 <div class="form-group">
                     <label class="label" for="nomeTitular">Nome do Titular</label>
-                    <input type="text" class="form-control" id="nomeTitular">
+                    <input type="text" class="form-control" name="nomeTitular" id="nomeTitular">
                 </div>
             </div>
         </div>
@@ -34,20 +35,21 @@
             <div class="col-6">
                 <div class="form-group">
                     <label class="label" for="validadeCartao">Validade do cartão (MM/AA)</label>
-                    <input type="text" class="form-control align-middle" id="validadeCartao">
+                    <input type="text" class="form-control align-middle" name="validadeCartao" id="validadeCartao" maxlength="7">
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
                     <label class="label" for="codigoSeguranca">Código segurança (CVV)</label>
-                    <input type="text" class="form-control" id="codigoSeguranca">
+                    <input type="text" class="form-control" name="codigoSeguranca" id="codigoSeguranca">
                 </div>
             </div>
         </div>
+        <input type="hidden" name="clienteId" value="{{ $clienteId }}">
         <div class="row">
             <div class="col-12">
                 <div class="row justify-content-center btn-padding">
-                    <input class="btn btn-primary btn-lg" type="submit" value="Continuar" >
+                    <input class="btn btn-primary btn-lg" type="submit" value="Continuar" id="cartaoSubmit" disabled >
                 </div>
             </div>
         </div>

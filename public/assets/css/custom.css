@@ -30,6 +30,7 @@
     -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
     border-radius: 0.35rem;
     border: 3px solid #ffff;
+    cursor: pointer;
 }
 
 .active {
@@ -64,10 +65,13 @@
     border-bottom: 1px solid #1826e6;
 }
 
-#nome{
+#nome,#nomeTitular{
     text-transform: capitalize;
 }
 
+input:focus{
+    border-bottom: 1px solid #1826e6 !important; 
+}
 select{
     padding-top: 3px;
     padding-bottom: 3px;
@@ -123,10 +127,11 @@ select:focus {
 }
 
 .btn-padding{
-    padding-top: 130px;
+    padding-top: 110px;
+    padding-bottom: 70px;
 }
 
-.error{
+.error,.error:focus{
     color: red !important;
     border-bottom: 1px solid red !important;
     border-radius: 0px;

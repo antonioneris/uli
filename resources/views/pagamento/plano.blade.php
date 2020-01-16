@@ -4,7 +4,7 @@
 
 <div class="container mt-4 pb-5">
     <div class="row justify-content-md-start ">
-        <p class="text-left"><i class="fas fa-chevron-left" id="voltar"></i>
+        <p class="text-left"><a href="{{ route('plano')}}"><i class="fas fa-chevron-left" id="voltar"></i></a>
         </p>  
     </div>
     <div class="row justify-content-md-start mt-3">
@@ -70,7 +70,5 @@
             <input class="btn btn-primary btn-lg" type="submit" value="Continuar" >
         </div>
     </form>
-    <div class="mt-5"></div>
 </div>
-
 @endsection
